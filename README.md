@@ -91,3 +91,30 @@ Nos puede resultar tedioso estar ejecutando el comando anterior siempre después
 ```bash
 npx tsc --watch
 ```
+
+## Tipado o type annotation en TypeScript
+
+El tipado en TypeScript hace referencia a cómo declaramos una variable, necesitamos asignar el tipo de dato, conocido como **type annotation**, con esto evitamos mezclar distintos tipos de datos.
+
+### La flexibilidad de JavaScript
+
+Nosotros podemos declarar una variable de un tipo de valor y a lo largo del código ir cambiándolo si lo deseamos. Por lo que en un momento puede ser de tipo `string` y después de tipo `boolean`:
+![Tipado en JavaScript](./assets/tipado-javascript.webp)
+
+Para proyectos de sofware que tienen una gran escalabilidad, esto podría ser fuente de fallas en el programa.
+
+### Controlando la flexibilidad
+
+Gracias a TypeScript podemos manejar el tipado de las variables para evitar anomalías en el código.
+
+En **JavaScript**, para declarar una variable constante lo realizamos así:
+
+```javascript
+const productPrice = 12;
+```
+
+En **TypeScript**, para el caso anterior, es similar solo que añadimos `:` y el tipo de dato de la variable, la cual sería `number`. A esto último se le llama **type annotation** o anotación de tipo:
+
+```typescript
+const productPrice: number = 12;
+```
