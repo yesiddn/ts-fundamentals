@@ -47,3 +47,47 @@ Deno, del mismo creador de Node.js, es un nuevo entorno de ejecución para JavaS
 ### Resume image
 
 ![Resume](./assets/compile-ts.png)
+
+## Creando un archivo TSConfig.json
+
+En la terminal, ubicándonos dentro del directorio en el que queremos que se cree el archivo, ejecutemos:
+
+```bash
+npx tsc --init
+```
+
+Nos creará automáticamente el archivo con propiedades básicas activadas:
+![Resultado al correr el comando: npx tsc --init](./assets/npx-tsc-init.webp)
+
+Dentro del archivo `TSConfig.json` podemos ver que tiene muchas propiedades comentadas (desactivadas) y de las cuales solo algunas están activadas.
+
+Luego, se le quita el comentario a la propiedad `outDir` y se le asigna el valor de `./dist` para que los archivos transpilados se guarden en la carpeta dist. Además, nos ahorra tener que enviar `--outDir dist` cada vez que queramos [transpilar](#send-the-output-to-a-specific-folder) un archivo TypeScript.
+
+```json
+{
+  "outDir": "./dist",
+}
+```
+
+Otra propiedad que se puede activar es `rootDir`, la cual indica la carpeta donde se encuentran los archivos TypeScript. Si no se especifica, TypeScript asume que los archivos están en la raíz del proyecto.
+
+```json
+{
+  "outDir": "./dist",
+  "rootDir": "./src"
+}
+```
+
+Y ya se puede transpilar los archivos TypeScript sin necesidad de enviar la ruta del archivo y la carpeta de destino:
+
+```bash
+npx tsc
+```
+
+## Compilación en tiempo real
+
+Nos puede resultar tedioso estar ejecutando el comando anterior siempre después de escribir nuestro código. Para evitar esto, podemos hacer que el compilador esté detectando cada cambio que realicemos en nuestros archivos TypeScript y haga la transpilación de inmediato:
+
+```bash
+npx tsc --watch
+```
