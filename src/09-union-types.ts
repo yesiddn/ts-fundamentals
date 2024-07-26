@@ -13,8 +13,8 @@
     }
   }
 
-  console.log(10);
-  console.log('hello');
+  print(10);
+  print('hello');
 
   // Discriminated unions
   interface Circle {
