@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/yesiddn/ts-fundamentals#readme",
   "devDependencies": {
+    "@types/lodash": "^4.17.7",
     "typescript": "^5.5.3"
   },
   "dependencies": {
-    "date-fns": "^3.6.0"
+    "date-fns": "^3.6.0",
+    "lodash": "^4.17.21"
   }
 }
