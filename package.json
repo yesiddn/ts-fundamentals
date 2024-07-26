@@ -21,5 +21,8 @@
   "homepage": "https://github.com/yesiddn/ts-fundamentals#readme",
   "devDependencies": {
     "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "date-fns": "^3.6.0"
   }
 }
